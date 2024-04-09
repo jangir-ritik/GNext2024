@@ -325,7 +325,8 @@ body {
     padding: 80px;
     flex-direction: column;
     gap: 84px;
-    /* width: 100%; */
+    width: 100vw;
+    box-sizing: border-box;
 }
 
 .footerWrapper .footer .group2 {
@@ -466,6 +467,7 @@ body {
         flex-direction: column;
         gap: 32px;
         padding: 40px 24px;
+        align-items: start;
     }
 
     .contactSection #contactUsBgImage {
