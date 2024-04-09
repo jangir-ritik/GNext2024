@@ -1,12 +1,15 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const cors = require('cors'); // Import cors module
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3005;
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
+// Use cors middleware
+app.use(cors());
 
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
@@ -24,10 +27,7 @@ app.post('/api/send-mail', (req, res) => {
   const { name, email, modalMessage, selectedCheckboxes } = req.body;
 
   // Define recipients
-  const recipients = ['lubhanm@proteantech.in', 
-//   'subhadips@proteantech.in'
-'jangir.ritik06@gmail.com'
-];
+  const recipients = ['lubhanm@proteantech.in', 'jangir.ritik06@gmail.com'];
 
   // Construct email message
   const message = {
