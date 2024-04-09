@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protean lead generating</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Borel&display=swap">
+</head>
+<body>
+    <div class='Header'>
+        <Image src="./public/images/proteanLogo.png" alt='protean logo' />
+    </div>
+    <section class="heroSection">
+        <div class="leftWrapper">
+            <h1 class="borel">Hello world,</h1>
+            <p class="openSans">We are Protean eGov Technologies. India's largest and publicly listed Digital Public Infrastructure organisation.</p>
+        </div>
+        <div class="rightWrapper">
+            <!-- Slide component -->
+            <!-- PdfViewer component -->
+            <embed style="width: 100%; height: 100%;" type="application/pdf" src="./public/proteanCorporateDeck.pdf"></embed>
+        </div>
+        <img id="heroSectionLeftImage" src="./public/images/heroSectionBgLeft.png" alt="decorative image">
+        <img id="heroSectionRightImage" src="./public/images/heroSectionBgRight.png" alt="decorative image">
+    </section>
+    
+      <section class="aboutSection openSans">
+        <p>Protean has been at the forefront of building India's digital infrastructure for nearly three decades. We are #BuildingForBillions and are on a mission of social and financial inclusion for every Indian.</p> 
+        <p>We have modernised tax services, enabled digital pension infrastructure and are the largest ID & Authentication service providers in the country. The impact of our work has touched the lives of every Indian.</p>
+    </section>
+    
+
+      <section class="contactSection">
+        <h2>We would love to connect</h2>
+        <div class="formWrapper" id="contactForm">
+            <form id="contactForm" class="contactForm">
+                <fieldset>
+                  <div class="form-group">
+                    <label for="name">Name<span>*</span></label>
+                    <input id="name" type="text" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="company">Company<span>*</span></label>
+                    <input id="company" type="text" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="jobTitle">Job Title<span>*</span></label>
+                    <input id="jobTitle" type="text" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="country">Country<span>*</span></label>
+                    <input id="country" type="text" />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email Address<span>*</span></label>
+                    <input id="email" type="email" required />
+                  </div>
+                  <div class="terms">
+                    <input id="terms" type="checkbox" required />
+                    <label for="terms">
+                      I agree to the <a href="#">Terms & Conditions.</a>
+                    </label>
+                  </div>
+                </fieldset>
+                <button class="CTA" type="submit">
+                  Get in touch
+                  <!-- Include arrow icon here -->
+                </button>
+              </form>
+              
+        </div>
+        <img id="contactUsBgImage" src="./public/images/contactUsBg.png" alt="decorative image">
+    </section>
+
+    <!-- <section class="thankyouCardWrapper">
+        <div class="thankyouCard">
+            <img id="topImage" src="./public/images/thankyouBgTop.png" alt="decorative image">
+            <div class="content">
+                <h2>thank you</h2>
+                <p>for sharing the details. We will get back to you shortly.</p>
+                <img id="bottomImage" src="./public/images/thankyouBgBottom.png" alt="decorative image">
+            </div>
+        </div>
+        <img id="contactUsBgImage" src="./public/images/contactUsBg.png" alt="decorative image">
+    </section> -->
+
+    <div class='footerWrapper'>
+        <footer class='footer'>
+            <div class='group1'>
+                <img src='./public/images/proteanLogoWhite.png' alt='protean logo' />
+            </div>
+            <div class='group2'>
+                <div class='leftWrapper'>
+                    <ul>
+                        <li><a href='https://www.proteantech.in/policy' title='Privacy policy'>Privacy policy</a></li>
+                        <li><a href='https://www.proteantech.in/disclaimer' title='Disclaimer'>Disclaimer</a></li>
+                        <li><a href='https://www.proteantech.in/terms' title='Terms & Conditions'>Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class='rightWrapper'>
+                    <ul>
+                        <li><a href='https://www.linkedin.com/company/proteantech/' title='linkedin'><img src='./public/svgs/li.svg' alt='linkedin' /></a></li>
+                        <li><a href='https://www.twitter.com/ProteanEgovTech' title='x'><img src='./public/svgs/x.svg' alt='x' /></a></li>
+                        <li><a href='https://www.facebook.com/ProteanTechnologies' title='facebook'><img src='./public/svgs/fb.svg' alt='facebook' /></a></li>
+                        <li><a href='https://www.youtube.com/@proteanegovtechnologies' title='youtube'><img src='./public/svgs/yt.svg' alt='youtube' /></a></li>
+                        <li><a href='https://www.instagram.com/ProteanTechnologies' title='instagram'><img src='./public/svgs/ig.svg' alt='instagram' /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <img id='footerBgImage' src='./public/images/footerBg.png' alt='decorative image' />
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
