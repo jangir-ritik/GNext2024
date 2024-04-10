@@ -29,7 +29,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Route to handle sending emails
-app.post('/api/send-mail', (req, res) => {
+app.post('/maillead/send-mail', (req, res) => {
   const { name, email, company, jobTitle, country } = req.body;
 
   // Define recipients

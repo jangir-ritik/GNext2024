@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Send form data to your server
-        fetch('http://34.93.244.215:3005/api/send-mail', {
+        fetch('http://proteantech.in/maillead/send-mail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
