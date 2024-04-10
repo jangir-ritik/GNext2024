@@ -11,20 +11,20 @@ app.use(bodyParser.json());
 // Use cors middleware
 app.use(cors());
 
-const EMAIL_HOST="outlook.office365.com"
-const EMAIL_PORT=587
-const EMAIL_SECURE="false"
-const EMAIL_USERNAME='info-x@proteantech.in'
-const EMAIL_PASSWORD='!@poiu34'
+// const EMAIL_HOST="outlook.office365.com"
+// const EMAIL_PORT=587
+// const EMAIL_SECURE="false"
+// const EMAIL_USERNAME='info-x@proteantech.in'
+// const EMAIL_PASSWORD='!@poiu34'
 
 // Nodemailer transporter configuration
 const transporter = nodemailer.createTransport({
-  host: EMAIL_HOST,
-  port: EMAIL_PORT,
-  secure: EMAIL_SECURE === 'true',
+  host: process.env.EMAIL_HOST,
+  port: process.env.EMAIL_PORT,
+  secure: process.env.EMAIL_SECURE === 'true',
   auth: {
-    user: EMAIL_USERNAME,
-    pass: EMAIL_PASSWORD,
+    user: process.env.EMAIL_USERNAME,
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
 
