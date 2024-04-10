@@ -329,6 +329,15 @@ body {
     box-sizing: border-box;
 }
 
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
 .footerWrapper .footer .group2 {
     display: flex;
     flex-direction: column;
