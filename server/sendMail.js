@@ -21,7 +21,7 @@ const EMAIL_PASSWORD='!@poiu34'
 const transporter = nodemailer.createTransport({
   host: EMAIL_HOST,
   port: EMAIL_PORT,
-  secure: EMAIL_SECURE === 'true',
+  secure: 'true',
   auth: {
     user: EMAIL_USERNAME,
     pass: EMAIL_PASSWORD,
