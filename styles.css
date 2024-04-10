@@ -113,6 +113,10 @@ body {
     flex-grow: 1;
 }
 
+.heroSection .rightWrapper #mobileBgImage {
+    display: none;
+}
+
 .aboutSection {
     padding: 120px 80px;
     display: flex;
@@ -165,6 +169,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
     align-items: center;
 }
 
@@ -174,6 +179,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 60px;
+    width: 100%;
 }
 
 .contactSection .formWrapper fieldset {
@@ -189,6 +195,7 @@ body {
     gap: 8px;
     justify-content: center;
     align-items: start;
+    max-width: 360px;
 }
 
 .contactSection .formWrapper .form-group label {
@@ -207,6 +214,7 @@ body {
     height: 48px;
     padding: 8px 16px;
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 .contactSection .formWrapper .form-group select {
@@ -227,6 +235,11 @@ body {
     width: 100%;
     align-items: center;
     gap: 12px;
+}
+
+.contactSection .formWrapper .terms label a {
+    text-decoration: none;
+    color: black;
 }
 
 .contactSection .formWrapper .terms label a {
@@ -458,6 +471,25 @@ body {
         font-size: 15px;
         line-height: 18px;
     }
+
+    .heroSection .rightWrapper {
+        height: 60vw;
+        padding: 40px 0;
+    }
+
+    .heroSection .rightWrapper #mobileBgImage {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        scale: 1.2;
+        top: 58%;
+        left: 58%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+}
 
     .aboutSection {
         padding: 40px 24px;
