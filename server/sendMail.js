@@ -30,7 +30,7 @@ const transporter = nodemailer.createTransport({
 
 // Route to handle sending emails
 app.post('/api/send-mail', (req, res) => {
-  const { name, email, modalMessage, selectedCheckboxes } = req.body;
+  const { name, email, company, jobTitle, country } = req.body;
 
   // Define recipients
   const recipients = ['lubhanm@proteantech.in', 'jangir.ritik06@gmail.com'];
@@ -43,8 +43,9 @@ app.post('/api/send-mail', (req, res) => {
     text: `
       Name: ${name}\n
       Email: ${email}\n
-      Interested in: ${selectedCheckboxes.join(', ')}\n
-      Message: ${modalMessage}
+      Company: ${company}\n
+      JobTitle: ${jobTitle}\n
+      Country: ${country}
     `,
   };
 
