@@ -1,11 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const contactSection = document.querySelector('.contactSection');
     const form = document.getElementById('contactForm');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const thankyouModal = document.querySelector('.thankyouCardWrapper');
+
+    contactSection.classList.remove('hidden');
+    thankyouModal.classList.toggle('hidden');
 
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent form submission
 
+        submitButton.disabled = true;
+        submitButton.textContent = 'Submitting...';
+
         // Validate form fields
         if (!validateForm()) {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Get in touch';
             return;
         }
 
@@ -25,8 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Please fill out all required fields.');
             return false;
         }
-
-        // Additional validation logic can be added here
 
         return true; // Return true if validation passes
     }
@@ -50,7 +59,11 @@ document.addEventListener('DOMContentLoaded', function () {
         })
             .then(response => {
                 if (response.ok) {
+                    thankyouModal.classList.toggle('hidden');
+                    contactSection.classList.toggle('hidden');
+                    submitButton.textContent = 'Email sent';
                     console.log('Form submitted successfully');
+
                     // Handle success, e.g., show success message
                 } else {
                     console.error('Failed to submit form');
@@ -60,6 +73,11 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch(error => {
                 console.error('Error submitting form:', error);
                 // Handle error, e.g., show error message
+            })
+            .finally(() => {
+                // Re-enable submit button after form submission completes
+                submitButton.disabled = false;
+                submitButton.textContent = 'Get in touch';
             });
     }
 });
